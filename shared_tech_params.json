@@ -1,0 +1,12 @@
+{
+    "assets": {
+        "ABN": {
+            "name": "image",
+            "url": "//meta-q.cdn.bubble.io/f1764076251149x680419378703418800/Interfa%C8%9Ba%20telefonului%20%C3%AEntr-un%20design%20pastel.png"
+        }
+    },
+    "dependencies": {
+        "plugin_api_version": 4,
+        "use_jquery": true
+    }
+}

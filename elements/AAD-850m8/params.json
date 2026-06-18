@@ -1,0 +1,217 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 300,
+        "width": 300
+    },
+    "display": "Phone Number Input FREE",
+    "events": {
+        "AAL": {
+            "caption": "Phone Changed",
+            "doc": "Triggered every time the user modifies the phone input value.",
+            "name": "phone_changed"
+        },
+        "AAM": {
+            "caption": "Phone Valid",
+            "doc": "Triggered when the phone number becomes valid according to the selected country’s pattern.",
+            "name": "phone_valid"
+        },
+        "AAN": {
+            "caption": "Phone Invalid",
+            "doc": "Triggered when the phone number becomes invalid (length or pattern mismatch).",
+            "name": "phone_invalid"
+        },
+        "AAO": {
+            "caption": "Country Changed",
+            "doc": "Triggered after the user selects a different country from the dropdown modal.",
+            "name": "country_changed"
+        },
+        "AAj": {
+            "caption": "Country Modal Opened",
+            "doc": "Triggered the moment the country selection modal becomes visible.",
+            "name": "country_modal_opened"
+        },
+        "AAk": {
+            "caption": "Input Focused",
+            "doc": "Triggered when the country modal is closed.",
+            "name": "input_focused"
+        },
+        "AAl": {
+            "caption": "Input Blurred",
+            "doc": "Triggered when the phone input field receives focus.",
+            "name": "input_blurred"
+        },
+        "AAm": {
+            "caption": "Country Modal Closed",
+            "doc": "Triggered when the phone input loses focus.",
+            "name": "country_modal_closed"
+        }
+    },
+    "fields": {
+        "AAP": {
+            "caption": "Default Value",
+            "doc": "This field lets you pre-fill the input with a phone number when the element is loaded.",
+            "editor": "DynamicValue",
+            "name": "default_value",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AAe": {
+            "caption": "Show Flag",
+            "default_val": true,
+            "doc": "Shows or hides the country flag in the input and in the country list dropdown.",
+            "editor": "Checkbox",
+            "name": "show_flag",
+            "rank": 4
+        },
+        "AAf": {
+            "caption": "Show dial code",
+            "default_val": true,
+            "doc": "Shows or hides the dial code (+373, +40, etc.) next to the flag.",
+            "editor": "Checkbox",
+            "name": "show_dial_code",
+            "rank": 5
+        },
+        "AAg": {
+            "caption": "Enable formatting",
+            "default_val": true,
+            "doc": "When enabled, the phone number is automatically formatted based on the selected country pattern. When disabled → typing works as raw digits only (no spaces, no separators).",
+            "editor": "Checkbox",
+            "name": "enable_formatting",
+            "rank": 6
+        },
+        "AAo": {
+            "caption": "🔧Input Settings",
+            "editor": "Label",
+            "name": "🔧input_settings",
+            "rank": 0
+        },
+        "ABM": {
+            "caption": "ISO Country Name",
+            "doc": "The ISO country code (e.g., AF, AE, AL).",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "default_dialCode",
+            "optional": true,
+            "rank": 1
+        },
+        "ABO": {
+            "caption": "Placeholder",
+            "default_val": "Phone number",
+            "doc": "Placeholder text displayed when the input is empty.",
+            "editor": "DynamicValue",
+            "name": "inputPlaceholder",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABP": {
+            "caption": "Placeholder Color",
+            "default_val": "rgba(149,165,166,1)",
+            "doc": "Defines the color used for all visible text in the phone input, including typed numbers and country details.",
+            "editor": "Color",
+            "name": "placeholder_color",
+            "rank": 7
+        },
+        "ABQ": {
+            "caption": "Text Color",
+            "default_val": "rgba(0,0,0,1)",
+            "doc": "Specifies the color of the placeholder text shown in the input before the user types anything.",
+            "editor": "Color",
+            "name": "textColor",
+            "rank": 8
+        }
+    },
+    "icon": "ion-android-phone-portrait",
+    "platform_type": "mobile",
+    "property_applications": {
+        "Background": false,
+        "Border": false,
+        "BoxShadow": false,
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "AAE": {
+            "caption": "Full Number",
+            "doc": "The complete formatted number, including the country prefix.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "full_number",
+            "value": "text"
+        },
+        "AAF": {
+            "caption": "Country Name",
+            "doc": "The name of the selected country.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "country_name",
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "ISO Country Name",
+            "doc": "The ISO country code (e.g., AF, AE, AL).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ISO_country_name",
+            "value": "text"
+        },
+        "AAH": {
+            "caption": "Dial Code",
+            "doc": "The country prefix (e.g., +93, +376).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "dial_code",
+            "value": "text"
+        },
+        "AAJ": {
+            "caption": "is valid",
+            "doc": "Indicates whether the number is valid according to the country pattern.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "is_valid",
+            "value": "boolean"
+        },
+        "AAc": {
+            "caption": "error_message",
+            "doc": "The error message (optional, empty if none).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error_message",
+            "value": "text"
+        },
+        "AAi": {
+            "caption": "Raw Number",
+            "doc": "The unformatted number (digits only).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "raw_number",
+            "value": "number"
+        },
+        "ABR": {
+            "caption": "national number",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "national_number",
+            "value": "text"
+        },
+        "ABS": {
+            "caption": "e164 Number",
+            "doc": "The phone number in E.164 international format. No spaces or separators — digits only after the country code. Standard format used by Twilio, WhatsApp, SMS APIs, and most telephony services.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "e164_number",
+            "value": "text"
+        }
+    }
+}
